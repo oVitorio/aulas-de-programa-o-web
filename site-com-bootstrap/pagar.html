@@ -36,6 +36,21 @@
       height: 500px;
     }
   </style>
+  <script language ="javascript">
+    function testeCpf(){
+      // if(dados.cpf.value.length != 11){
+      //   alert("cpf invalido");
+      // }
+      var data = new Date;
+      if(dados.vencimento.value.Date == data){
+          alert("date valida");
+      }else{
+        alert("date invalida")
+      }
+    }
+
+
+  </script>
 
   <title>Document</title>
 </head>
@@ -99,6 +114,19 @@
     </div>
     </div>
 </div>
+
+<form  class="form row-cols-lg-12" name="dados" id="dados" action="pagarGrava.html">
+   
+   <div class=" col-lg-12"> 
+     <label for="cpf">cpf:</label> 
+     <input type="text" name="cpf" id="cpf">
+   </div>
+   <div class="date col-lg-12" > 
+     <label for="vencimento">vencimento:</label> 
+     <input type="date"  name="vencimeto" id="vencimento" onblur="testeCpf()">
+   </div>
+    <button type="submit">enviar</button>
+</form>
 
 
 
